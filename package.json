@@ -36,7 +36,10 @@
   },
   "keywords": [
     "ember-addon",
-    "tumblr"
+    "ember",
+    "emblr",
+    "tumblr",
+    "tumblr theme"
   ],
   "dependencies": {
     "ember-cli-babel": "^5.0.0"
