@@ -1,7 +1,7 @@
 {
   "name": "ember-emblr",
   "version": "0.0.1",
-  "description": "The default blueprint for ember-cli addons.",
+  "description": "Ember-cli addon for developing Tumblr templates in Ember",
   "directories": {
     "doc": "doc",
     "test": "tests"
