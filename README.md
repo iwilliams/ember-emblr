@@ -11,7 +11,13 @@ Emblr is an ember-cli addon for developing Tumblr themes that use Ember. Emblr w
 
 ## Usage
 
-Emblr injects the service `emblrStore` into your apps routes and controllers. You can then use this service to retrieve posts.
+Emblr injects the service `emblrStore` into your apps routes and controllers. You can then use this service to retrieve posts. There are 3 methods available for retrieving your blogs data. This plugin is still in development, so these are subject to change.
+
+#### `emblrStore.getPage(int pageNumber)`
+Will retrieve a page of posts, where the number returned is the amount of posts per page you have set in your Tumblr settings. The page index starts at 1, so `emblrStore.getPage(1)` will return an array posts from the most recent page of your blog.
+
+#### `emblrStore.getPost(int postId)`
+Will return a post object matching the id supplied.
 
 ## Running
 
