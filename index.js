@@ -18,9 +18,6 @@ module.exports = {
       return fs.readFileSync(__dirname + '/addon/tumblr-posts.htm').toString();
     }
   },
-  isDevelopingAddon: function() {
-    return true;
-  },
   serverMiddleware: function(config) {
     var self = this;
     var app = config.app;
