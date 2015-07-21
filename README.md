@@ -13,11 +13,31 @@ Emblr is an ember-cli addon for developing Tumblr themes that use Ember. Emblr w
 
 Emblr injects the service `emblrStore` into your apps routes and controllers. You can then use this service to retrieve posts. There are 3 methods available for retrieving your blogs data. This plugin is still in development, so these are subject to change.
 
-#### `emblrStore.getPage(int pageNumber)`
-Will retrieve a page of posts, where the number returned is the amount of posts per page you have set in your Tumblr settings. The page index starts at 1, so `emblrStore.getPage(1)` will return an array posts from the most recent page of your blog.
+#### `emblrStore.findPage(int page)`
+Will retrieve a page of posts, where the number returned is the amount of posts per page you have set in your Tumblr settings. The page index starts at 1, so `emblrStore.getPage(1)` will return an array of posts from the most recent page of your blog.
 
-#### `emblrStore.getPost(int postId)`
+#### `emblrStore.findPost(int id)`
 Will return a post object matching the id supplied.
+
+#### `emblrStore.findNotes(string notesUrl)` returns a promise
+This is a helper method for retrieving the notes associated with a post. The argument `notesUrl` is a property of any post object retrieved from the above methods. This method is needed because when you retrieve posts from `findPage()`, they do not come with the notes attached. The method returns a promise with the html string of notes as an argument. This is best used in the `afterModel` hook of a route like so:
+
+```JS
+export default Ember.Route.extend({
+  model: function(params) {
+    return this.emblrStore.findPost(params.post_id);
+  },
+  afterModel: function(post) {
+    if(!post["postNotes"]) {
+      return this.emblrStore.findNotes(post["postNotesURL"]).then((data)=>{
+        return post["postNotes"] = {"postNotes": data};
+      });
+    } else {
+      return;
+    }
+  }
+});
+```
 
 ## Running
 
