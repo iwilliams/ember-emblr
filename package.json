@@ -31,8 +31,7 @@
     "ember-data": "1.0.0-beta.16.1",
     "ember-disable-prototype-extensions": "^1.0.0",
     "ember-export-application-global": "^1.0.2",
-    "ember-try": "0.0.4",
-    "request": "^2.58.0"
+    "ember-try": "0.0.4"
   },
   "keywords": [
     "ember-addon",
@@ -42,7 +41,8 @@
     "tumblr theme"
   ],
   "dependencies": {
-    "ember-cli-babel": "^5.0.0"
+    "ember-cli-babel": "^5.0.0",
+    "request": "^2.58.0"
   },
   "ember-addon": {
     "configPath": "tests/dummy/config"
