@@ -1,4 +1,5 @@
-# Ember-emblr
+![Emblr](/emblr.png?raw=true)
+# Emblr
 
 Emblr is an ember-cli addon for developing Tumblr themes that use Ember. Emblr works by using the HTML that Tumblr serves as an API. To develop your theme locally, Emblr hooks into the ember-cli express server to bypass CORS and cosume Tumblr data.
 
