@@ -1,6 +1,6 @@
 {
   "name": "ember-emblr",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Ember-cli addon for developing Tumblr templates in Ember",
   "directories": {
     "doc": "doc",
