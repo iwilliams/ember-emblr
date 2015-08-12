@@ -3,7 +3,7 @@ import Ember from 'ember';
 export function tumblrParser(html) {
   var posts = [];
 
-  var domPosts = Ember.$(html).filter("#tumblr-posts").find(".post");
+  var domPosts = Ember.$(Ember.$(html).filter("#tumblr-posts").html()).filter(".post")
 
   function parse(obj, element) {
     Ember.$(element).children().each(function(index, attr) {

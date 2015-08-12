@@ -1,4 +1,4 @@
-<div id="tumblr-posts" style="display:none;">
+<script type="application/html" id="tumblr-posts">
     {block:Posts}
         <section class="post">
             <div data-attr="id">{PostID}</div>
@@ -9,8 +9,8 @@
             <div data-attr="shortURL">{ShortURL}</div>
             <div data-attr="encodedShortURL">{URLEncodedShortURL}</div>
             <div data-attr="postNotesURL">{PostNotesURL}</div>
-            <div data-attr="likeButton">{LikeButton}</div>
-            <div data-attr="reblogButton">{ReblogButton}</div>
+            <div data-attr="likeButton" data-format="js">{JSLikeButton}</div>
+            <div data-attr="reblogButton" data-format="js">{JSReblogButton}</div>
             {block:Date}
             <div data-attr="date" data-parent="obj">
                 <div data-attr="dayOfMonth">{DayOfMonth}</div>
@@ -45,7 +45,7 @@
                     <div data-attr="postNotes">{PostNotes}</div>
                     <div data-attr="postNotes16">{PostNotes-16}</div>
                     <div data-attr="postNotes64">{PostNotes-64}</div>
-                    {block:NoteCount}
+                    {block:NoteCount} 
                         <div data-attr="noteCount">{NoteCount}</div>
                         <div data-attr="noteCountWithLabel">{NoteCountWithLabel}</div>
                         <div data-attr="tagURL">{TagURL}</div>
@@ -64,12 +64,12 @@
                 </div>
             {/block:HasTags}
             <div data-attr="data" data-parent="obj">
-                {block:Text}
+                {block:Text} 
                     {block:Title}<div data-attr="title">{title}</div>{/block:Title}
                     <div data-attr="body">{body}</div>
                 {/block:Text}
                 {block:Photo}
-                    {block:Caption}
+                    {block:Caption} 
                         <div data-attr="photoAlt">{PhotoAlt}</div>
                         <div data-attr="caption">{Caption}</div>
                     {/block:Caption}
@@ -96,7 +96,7 @@
                         <div data-attr="photoURLHighRes">{PhotoURL-HighRes}</div>
                         <div data-attr="photoURL1280">{PhotoURL-1280}</div>
                         <div data-attr="photoWidth1280">{PhotoWidth-1280}</div>
-                        <div data-attr="photoHeight1280">{PhotoHeight-1280}</div>
+                        <div data-attr="photoHeight1280}">{PhotoHeight-1280}</div>
                         <div data-attr="photoWidthHighRes">{PhotoWidth-HighRes}</div>
                         <div data-attr="photoHeightHighRes">{PhotoHeight-HighRes}</div>
                     {/block:HighRes}
@@ -119,7 +119,7 @@
                     <div data-attr="photoURLPanorama">{PhotoURL-Panorama}</div>
                     <div data-attr="photoWidthPanorama">{PhotoWidth-Panorama}</div>
                     <div data-attr="photoHeightPanorama">{PhotoHeight-Panorama}</div>
-                    {block:Caption}
+                    {block:Caption} 
                         <div data-attr="photoAlt">{PhotoAlt}</div>
                         <div data-attr="caption">{Caption}</div>
                     {/block:Caption}
@@ -146,7 +146,7 @@
                         <div data-attr="photoURLHighRes">{PhotoURL-HighRes}</div>
                         <div data-attr="photoURL1280">{PhotoURL-1280}</div>
                         <div data-attr="photoWidth1280">{PhotoWidth-1280}</div>
-                        <div data-attr="photoHeight1280">{PhotoHeight-1280}</div>
+                        <div data-attr="photoHeight1280}">{PhotoHeight-1280}</div>
                         <div data-attr="photoWidthHighRes">{PhotoWidth-HighRes}</div>
                         <div data-attr="photoHeightHighRes">{PhotoHeight-HighRes}</div>
                     {/block:HighRes}
@@ -169,18 +169,18 @@
                     {block:Caption}
                         <div data-attr="caption">{Caption}</div>
                     {/block:Caption}
-                    <div data-attr="photoset">{Photoset}</div>
-                    <div data-attr="photoset700">{Photoset-700}</div>
-                    <div data-attr="photoset500">{Photoset-500}</div>
-                    <div data-attr="photoset400">{Photoset-400}</div>
-                    <div data-attr="photoset250">{Photoset-250}</div>
+                    <div data-attr="photoset" data-format="js">{JSPhotoset}</div>
+                    <div data-attr="photoset700" data-format="js">{JSPhotoset-700}</div>
+                    <div data-attr="photoset500" data-format="js">{JSPhotoset-500}</div>
+                    <div data-attr="photoset400" data-format="js">{JSPhotoset-400}</div>
+                    <div data-attr="photoset250" data-format="js">{JSPhotoset-250}</div>
                     <div data-attr="photoCount">{PhotoCount}</div>
                     <div data-attr="photosetLayout">{PhotosetLayout}</div>
                     <div data-attr="jsPhotosetLayout">{JSPhotosetLayout}</div>
                     <div data-attr="photos" data-parent="arr">
                     {block:Photos}
                         <div data-parent="obj">
-                            {block:Caption}
+                            {block:Caption} 
                                 <div data-attr="photoAlt">{PhotoAlt}</div>
                                 <div data-attr="caption">{Caption}</div>
                             {/block:Caption}
@@ -207,7 +207,7 @@
                                 <div data-attr="photoURLHighRes">{PhotoURL-HighRes}</div>
                                 <div data-attr="photoURL1280">{PhotoURL-1280}</div>
                                 <div data-attr="photoWidth1280">{PhotoWidth-1280}</div>
-                                <div data-attr="photoHeight1280">{PhotoHeight-1280}</div>
+                                <div data-attr="photoHeight1280}">{PhotoHeight-1280}</div>
                                 <div data-attr="photoWidthHighRes">{PhotoWidth-HighRes}</div>
                                 <div data-attr="photoHeightHighRes">{PhotoHeight-HighRes}</div>
                             {/block:HighRes}
@@ -280,14 +280,14 @@
                         <div data-attr="caption">{Caption}</div>
                     {/block:Caption}
                     {block:AudioEmbed}
-                        <div data-attr="audioEmbed">{AudioEmbed}</div>
-                        <div data-attr="audioEmbed250">{AudioEmbed-250}</div>
-                        <div data-attr="audioEmbed400">{AudioEmbed-400}</div>
-                        <div data-attr="audioEmbed500">{AudioEmbed-500}</div>
-                        <div data-attr="audioEmbed640">{AudioEmbed-640}</div>
+                        <div data-attr="audioEmbed" data-format="js">{JSAudioEmbed}</div>
+                        <div data-attr="audioEmbed250" data-format="js">{JSAudioEmbed-250}</div>
+                        <div data-attr="audioEmbed400" data-format="js">{JSAudioEmbed-400}</div>
+                        <div data-attr="audioEmbed500" data-format="js">{JSAudioEmbed-500}</div>
+                        <div data-attr="audioEmbed640" data-format="js">{JSAudioEmbed-640}</div>
                     {/block:AudioEmbed}
-                    {block:AudioPlayer}
-                        <div data-attr="auidoPlayer">{AudioPlayer}</div>
+                    {block:AudioPlayer} 
+                        <div data-attr="auidoPlayer" data-format="js">{JSAudioPlayer}</div>
                         <div data-attr="rawAudioURL">{RawAudioURL}</div>
                     {/block:AudioPlayer}
                     {block:PlayCount}
@@ -315,14 +315,14 @@
                     {block:Caption}
                         <div data-attr="caption">{Caption}</div>
                     {/block:Caption}
-                    <div data-attr="video700">{Video-700}</div>
-                    <div data-attr="video500">{Video-500}</div>
-                    <div data-attr="video400">{Video-400}</div>
-                    <div data-attr="video250">{Video-250}</div>
-                    <div data-attr="videoEmbed700">{VideoEmbed-700}</div>
-                    <div data-attr="vidoeEmbed500">{VideoEmbed-500}</div>
-                    <div data-attr="videoEmbed400">{VideoEmbed-400}</div>
-                    <div data-attr="videoEmbed250">{VideoEmbed-250}</div>
+                    <div data-attr="video700" data-format="js">{JSVideo-700}</div>
+                    <div data-attr="video500" data-format="js">{JSVideo-500}</div>
+                    <div data-attr="video400" data-format="js">{JSVideo-400}</div>
+                    <div data-attr="video250" data-format="js">{JSVideo-250}</div>
+                    <div data-attr="videoEmbed700" data-format="js">{JSVideoEmbed-700}</div>
+                    <div data-attr="vidoeEmbed500" data-format="js">{JSVideoEmbed-500}</div>
+                    <div data-attr="videoEmbed400" data-format="js">{JSVideoEmbed-400}</div>
+                    <div data-attr="videoEmbed250" data-format="js">{JSVideoEmbed-250}</div>
                     <div data-attr="playCount">{PlayCount}</div>
                     <div data-attr="formattedPlayCount">{FormattedPlayCount}</div>
                     <div data-attr="playCountWithLabel">{PlayCountWithLabel}</div>
@@ -361,4 +361,4 @@
             </div>
         </section>
     {/block:Posts}
-</div>
+</script>
