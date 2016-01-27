@@ -19,7 +19,10 @@ export default Ember.Object.extend({
       timeout: 30000
     })
     .then(function(data) {
-      return tumblrParser(Ember.$(data));
+        let d = tumblrParser(Ember.$(data));
+        console.log("PARSED POSTS");
+        console.log(d);
+      return d;
     });
   },
   findNotes: function(notesUrl) {

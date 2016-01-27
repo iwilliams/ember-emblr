@@ -1,3 +1,6 @@
-import emblrStore from 'ember-emblr/initializers/emblr-store';
+import { initialize } from "ember-emblr/initializers/emblr-store";
 
-export default emblrStore;
+export default {
+    name: "emblrStore",
+    initialize: initialize
+};
