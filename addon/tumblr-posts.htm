@@ -11,6 +11,17 @@
             <div data-attr="postNotesURL">{PostNotesURL}</div>
             <div data-attr="likeButton" data-format="js">{JSLikeButton}</div>
             <div data-attr="reblogButton" data-format="js">{JSReblogButton}</div>
+            <div data-attr="postAuthorName">{PostAuthorName}</div>
+            <div data-attr="postAuthorTitle">PostAuthorTitle}</div>
+            <div data-attr="postAuthorURL">PostAuthorURL</div>
+            <div data-attr="postAuthorPortraitURL16">PostAuthorPortraitURL-16</div>
+            <div data-attr="postAuthorPortraitURL24">PostAuthorPortraitURL-24</div>
+            <div data-attr="postAuthorPortraitURL30">PostAuthorPortraitURL-30</div>
+            <div data-attr="postAuthorPortraitURL40">PostAuthorPortraitURL-40</div>
+            <div data-attr="postAuthorPortraitURL48">PostAuthorPortraitURL-48</div>
+            <div data-attr="postAuthorPortraitURL64">PostAuthorPortraitURL-64</div>
+            <div data-attr="postAuthorPortraitURL96">PostAuthorPortraitURL-96</div>
+            <div data-attr="postAuthorPortraitURL128">PostAuthorPortraitURL-128</div>
             {block:Date}
             <div data-attr="date" data-parent="obj">
                 <div data-attr="dayOfMonth">{DayOfMonth}</div>
@@ -63,6 +74,20 @@
                     {/block:Tags}
                 </div>
             {/block:HasTags}
+            {block:Submission}
+                <div data-attr="submission" data-parent="obj">
+                    <div data-attr="submitter">{Submitter}</div>
+                    <div data-attr="submitterUrl">{SubmitterURL}</div>
+                    <div data-attr="submitterPortraitURL16">{SubmitterPortraitURL-16}</div>
+                    <div data-attr="submitterPortraitURL24">{SubmitterPortraitURL-24}</div>
+                    <div data-attr="submitterPortraitURL30">{SubmitterPortraitURL-30}</div>
+                    <div data-attr="submitterPortraitURL40">{SubmitterPortraitURL-40}</div>
+                    <div data-attr="submitterPortraitURL48">{SubmitterPortraitURL-48}</div>
+                    <div data-attr="submitterPortraitURL64">{SubmitterPortraitURL-64}</div>
+                    <div data-attr="submitterPortraitURL69">{SubmitterPortraitURL-69}</div>
+                    <div data-attr="submitterPortraitURL128">{SubmitterPortraitURL-128}</div>
+                </div>
+            {/block:Submission}
             <div data-attr="data" data-parent="obj">
                 {block:Text}
                     {block:Title}<div data-attr="title">{title}</div>{/block:Title}
@@ -119,7 +144,7 @@
                     <div data-attr="photoURLPanorama">{PhotoURL-Panorama}</div>
                     <div data-attr="photoWidthPanorama">{PhotoWidth-Panorama}</div>
                     <div data-attr="photoHeightPanorama">{PhotoHeight-Panorama}</div>
-                    {block:Caption} 
+                    {block:Caption}
                         <div data-attr="photoAlt">{PhotoAlt}</div>
                         <div data-attr="caption">{Caption}</div>
                     {/block:Caption}
@@ -180,7 +205,7 @@
                     <div data-attr="photos" data-parent="arr">
                     {block:Photos}
                         <div data-parent="obj">
-                            {block:Caption} 
+                            {block:Caption}
                                 <div data-attr="photoAlt">{PhotoAlt}</div>
                                 <div data-attr="caption">{Caption}</div>
                             {/block:Caption}
