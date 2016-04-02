@@ -3,7 +3,7 @@ export function initialize(applicationInstance) {
     let config     = applicationInstance.container.lookupFactory('config:environment');
     let emblrStore = applicationInstance.container.lookup('emblrStore:main');
 
-    emblrStore.set("queryBase",(config.environment === "production") ? "http://" + window.location.hostname "/" : config.baseURL + "tumblr-mock/");
+    emblrStore.set("queryBase",(config.environment === "production") ? "http://" + window.location.hostname + "/" : config.baseURL + "tumblr-mock/");
 }
 
 export default {
